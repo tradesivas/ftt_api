@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 api_key = os.getenv("api_key")
 api_secret = os.getenv("api_secret")
-request_code = input("Enter request_code: ")
+request_code = input("Enter request_code: ")    # 1. Open the Authorization URL https://auth.flattrade.in/?app_key=APIKEY 2. Enter your Client id (UCC), Password, PAN/DOB and submit 3. copy request code from https://yourRedirectURL.com/?request_code=requestCodeValue
 
 # Create the SHA-256 hash for the api_secret
 hash_input = api_key + request_code + api_secret
